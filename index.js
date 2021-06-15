@@ -89,8 +89,12 @@ hint: the strings returned need to exactly match the string in step 4.
  */
 
 function getWinnersByYear(data, getYearsCB, getWinnersCB) {
-    const yearWin = [return `In ${getYearsCB()} ${getWinnersCB()} won the world cup!`]
-  
+    const yearWin = getWinnersCB(data, getFinals)
+     return getYearsCB(data, getFinals).map((year,i) =>{
+     
+        return `In ${year}, ${yearWin[i]} won the world cup!`   
+
+    })
     
 }
 
